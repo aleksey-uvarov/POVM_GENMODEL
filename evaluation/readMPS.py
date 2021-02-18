@@ -17,9 +17,12 @@ def readMPS(MPSf='tensor.txt', N=16,convert=True):
 
     MPS.append(np.zeros((indices[N-1][2],indices[N-1][3])))
 
+    #print(MPS)
        
-    arrays = [np.array(map(float, line.split())) for line in open(MPSf)]
-    #print(arrays) 
+    arrays = [np.array(list(map(float, line.split()))) for line in open(MPSf)]
+    #print(arrays)
+    #print(arrays[0])
+    #print(int(arrays[0][0])-1)
     # 1st matrix
     counter=0
     #print indices 
@@ -40,6 +43,7 @@ def readMPS(MPSf='tensor.txt', N=16,convert=True):
 
     # reading last matrix 
     #print indices
+    #print(counter)
     for line in range(indices[N-1][1]):
         #print( MPS[N-1].shape)
         #print( arrays[counter][0],arrays[counter][1],arrays[counter][2])
