@@ -211,11 +211,11 @@ class PaMPS():
  
    
 
-
-#print "POVM", sys.argv[1]
-#print "Number_qubits", int(sys.argv[2])
-#print "MPS", sys.argv[3]
-#print "noise p ", float(sys.argv[4])
-#print "Nsamples",int(sys.argv[5])
-sampler = PaMPS(POVM=sys.argv[1], Number_qubits = int(sys.argv[2]),MPS=sys.argv[3],p=float(sys.argv[4]))
-sampler.samples(Ns=int(sys.argv[5]))
+if __name__=="__main__":
+    #print "POVM", sys.argv[1]
+    #print "Number_qubits", int(sys.argv[2])
+    #print "MPS", sys.argv[3]
+    #print "noise p ", float(sys.argv[4])
+    #print "Nsamples",int(sys.argv[5])
+    sampler = PaMPS(POVM=sys.argv[1], Number_qubits = int(sys.argv[2]),MPS=sys.argv[3],p=float(sys.argv[4]))
+    sampler.samples(Ns=int(sys.argv[5]))
