@@ -314,6 +314,6 @@ class LatentAttention():
                      
             
             
-
-model = LatentAttention(data='./data/train.txt', K=4, Number_qubits = int(sys.argv[1]), latent_rep_size=int(sys.argv[2]), gru_hidden=int(sys.argv[3]), decoder='TimeDistributed_mol', Nsamples = int(sys.argv[4]) )
-model.train()
+if __name__=="__main__":
+    model = LatentAttention(data='./data/train.txt', K=4, Number_qubits = int(sys.argv[1]), latent_rep_size=int(sys.argv[2]), gru_hidden=int(sys.argv[3]), decoder='TimeDistributed_mol', Nsamples = int(sys.argv[4]) )
+    model.train()
